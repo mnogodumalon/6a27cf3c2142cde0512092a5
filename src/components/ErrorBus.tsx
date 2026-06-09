@@ -10,6 +10,7 @@ const USER_TYPES = new Set<string>([
   'validation-error',
   'required-field-missing',
   'unique-constraint-violation',
+  'no-app-permission',
 ]);
 
 const BUG_TYPES = new Set<string>([
