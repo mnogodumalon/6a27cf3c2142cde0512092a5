@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "zutaten",
+      "app_id": "6a27cf2743b0d7439fa14f61",
+      "path": "/rest/apps/6a27cf2743b0d7439fa14f61/records",
+      "allowed_fields": [
+        "kategorie",
+        "marke_hersteller",
+        "bezugsquelle",
+        "notizen_zutat",
+        "produkt_name"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Zutaten — Formular"
+    },
+    {
+      "entity": "apfelstrudel_varianten",
+      "app_id": "6a27cf2c36acebe2902395b6",
+      "path": "/rest/apps/6a27cf2c36acebe2902395b6/records",
+      "allowed_fields": [
+        "datum_zubereitung",
+        "bewertung",
+        "kommentar",
+        "variante_name"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Apfelstrudel-Varianten — Formular"
+    }
+  ]
+}

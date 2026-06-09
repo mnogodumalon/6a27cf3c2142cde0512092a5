@@ -1,0 +1,3 @@
+- Zutaten (zutaten): kategorie[lookup/select], marke_hersteller[string/text], bezugsquelle[string/text], notizen_zutat[string/textarea], produkt_name[string/text]
+- Apfelstrudel-Varianten (apfelstrudel_varianten): datum_zubereitung[date/date], verwendete_zutaten[applookup/select], bewertung[lookup/radio], kommentar[string/textarea], variante_name[string/text]
+  → verwendete_zutaten links to app_id 6a27cf2743b0d7439fa14f61

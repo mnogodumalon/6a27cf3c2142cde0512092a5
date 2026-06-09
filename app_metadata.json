@@ -1,0 +1,192 @@
+{
+  "appgroup_id": "6a27cf3c2142cde0512092a5",
+  "appgroup_name": "Apfelstrudel-Varianten",
+  "apps": {
+    "zutaten": {
+      "app_id": "6a27cf2743b0d7439fa14f61",
+      "name": "Zutaten",
+      "controls": {
+        "kategorie": {
+          "identifier": "kategorie",
+          "label": "Kategorie",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "ei": "Ei",
+            "teig": "Teig",
+            "obst": "Obst",
+            "zucker": "Zucker & Süßungsmittel",
+            "gewuerz": "Gewürz",
+            "fett": "Fett & Öl",
+            "milchprodukt": "Milchprodukt",
+            "sonstiges": "Sonstiges"
+          }
+        },
+        "marke_hersteller": {
+          "identifier": "marke_hersteller",
+          "label": "Marke / Hersteller",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "bezugsquelle": {
+          "identifier": "bezugsquelle",
+          "label": "Bezugsquelle",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "notizen_zutat": {
+          "identifier": "notizen_zutat",
+          "label": "Notizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "produkt_name": {
+          "identifier": "produkt_name",
+          "label": "Produktname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    },
+    "apfelstrudel_varianten": {
+      "app_id": "6a27cf2c36acebe2902395b6",
+      "name": "Apfelstrudel-Varianten",
+      "controls": {
+        "datum_zubereitung": {
+          "identifier": "datum_zubereitung",
+          "label": "Datum der Zubereitung",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` (or `null`/`None`).\n\nFor example: `2000-02-29`.\n\nFor `POST`/`PUT`/`PATCH` requests the REST API uses a liberal parsing approach so that strings like `2026`, `February 29, 2000 12:34 MEST`, `letztes Jahr` etc. will be accepted as value date values. However this runs the risk of parsing ambiguous values incorrectly. To ensure reliable parsing it is best to use the canonical format specified above.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "verwendete_zutaten": {
+          "identifier": "verwendete_zutaten",
+          "label": "Verwendete Zutaten",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Zutaten' with the id `6a27cf2743b0d7439fa14f61` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://ci04.ci.xist4c.de/rest/apps/6a27cf2743b0d7439fa14f61/records/<record-id>` (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_app": "https://ci04.ci.xist4c.de/rest/apps/6a27cf2743b0d7439fa14f61"
+        },
+        "bewertung": {
+          "identifier": "bewertung",
+          "label": "Bewertung (1–5)",
+          "type": "lookup",
+          "subtype": "radio",
+          "fulltype": "lookup/radio",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as radio button fields in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "bewertung_2": "2 – Ausreichend",
+            "bewertung_3": "3 – Gut",
+            "bewertung_4": "4 – Sehr gut",
+            "bewertung_5": "5 – Ausgezeichnet",
+            "bewertung_1": "1 – Nicht gut"
+          }
+        },
+        "kommentar": {
+          "identifier": "kommentar",
+          "label": "Kommentar / Notizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "variante_name": {
+          "identifier": "variante_name",
+          "label": "Bezeichnung der Variante",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Zutaten",
+      "Apfelstrudel-Varianten"
+    ]
+  }
+}
