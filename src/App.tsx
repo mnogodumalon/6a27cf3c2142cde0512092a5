@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import ZutatenPage from '@/pages/ZutatenPage';
 import ApfelstrudelVariantenPage from '@/pages/ApfelstrudelVariantenPage';
@@ -29,7 +28,7 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="zutaten" element={<ZutatenPage />} />
                 <Route path="apfelstrudel-varianten" element={<ApfelstrudelVariantenPage />} />
                 <Route path="admin" element={<AdminPage />} />
